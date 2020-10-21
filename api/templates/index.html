@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <form action="" method="post">
+      <label for="cars">Select a Disease:</label>
+      <select name="cars" id="cars" form="carform">
+        {% for disease in diseases %}
+        <option value="{{disease}}">{{disease}}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
