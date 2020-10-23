@@ -6,7 +6,7 @@ from flask_restx import Resource, Api
 from utils.reader import read_text, read_text_from_disk
 
 LOG = logging.getLogger(__name__)
-
+FILENAME = "hetionet-v1.0-nodes.tsv"
 app = Flask(__name__)
 api = Api(app)
 
@@ -23,7 +23,7 @@ class Treatment(Resource):
 
 @app.route('/home')
 def index():
-    node_list = read_text_from_disk("hetionet-v1.0-nodes.tsv", delimiter='\t', skip_header=False)
+    node_list = read_text_from_disk(FILENAME, delimiter='\t', skip_header=False)
     diseases = [node.get('id') for node in node_list if node.get('id').startswith('Disease')]
     return render_template('index.html', diseases=["Disease::DOID:9970"] + diseases)
 
