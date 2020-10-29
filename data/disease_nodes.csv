@@ -1,0 +1,137 @@
+id,name,kind
+Disease::DOID:986,alopecia areata,Disease
+Disease::DOID:9206,Barrett's esophagus,Disease
+Disease::DOID:5419,schizophrenia,Disease
+Disease::DOID:3083,chronic obstructive pulmonary disease,Disease
+Disease::DOID:7148,rheumatoid arthritis,Disease
+Disease::DOID:14227,azoospermia,Disease
+Disease::DOID:1793,pancreatic cancer,Disease
+Disease::DOID:8893,psoriasis,Disease
+Disease::DOID:2986,IgA glomerulonephritis,Disease
+Disease::DOID:9008,psoriatic arthritis,Disease
+Disease::DOID:10652,Alzheimer's disease,Disease
+Disease::DOID:7147,ankylosing spondylitis,Disease
+Disease::DOID:13223,uterine fibroid,Disease
+Disease::DOID:0050741,alcohol dependence,Disease
+Disease::DOID:14330,Parkinson's disease,Disease
+Disease::DOID:7693,abdominal aortic aneurysm,Disease
+Disease::DOID:635,acquired immunodeficiency syndrome,Disease
+Disease::DOID:0050742,nicotine dependence,Disease
+Disease::DOID:3312,bipolar disorder,Disease
+Disease::DOID:418,systemic scleroderma,Disease
+Disease::DOID:11612,polycystic ovary syndrome,Disease
+Disease::DOID:8577,ulcerative colitis,Disease
+Disease::DOID:1612,breast cancer,Disease
+Disease::DOID:332,amyotrophic lateral sclerosis,Disease
+Disease::DOID:0050156,idiopathic pulmonary fibrosis,Disease
+Disease::DOID:1909,melanoma,Disease
+Disease::DOID:263,kidney cancer,Disease
+Disease::DOID:2531,hematologic cancer,Disease
+Disease::DOID:2394,ovarian cancer,Disease
+Disease::DOID:219,colon cancer,Disease
+Disease::DOID:9970,obesity,Disease
+Disease::DOID:12365,malaria,Disease
+Disease::DOID:8778,Crohn's disease,Disease
+Disease::DOID:1324,lung cancer,Disease
+Disease::DOID:824,periodontitis,Disease
+Disease::DOID:2377,multiple sclerosis,Disease
+Disease::DOID:10283,prostate cancer,Disease
+Disease::DOID:4481,allergic rhinitis,Disease
+Disease::DOID:10763,hypertension,Disease
+Disease::DOID:3393,coronary artery disease,Disease
+Disease::DOID:1686,glaucoma,Disease
+Disease::DOID:9744,type 1 diabetes mellitus,Disease
+Disease::DOID:12849,autistic disorder,Disease
+Disease::DOID:1936,atherosclerosis,Disease
+Disease::DOID:2994,germ cell cancer,Disease
+Disease::DOID:1319,brain cancer,Disease
+Disease::DOID:1192,peripheral nervous system neoplasm,Disease
+Disease::DOID:13499,jejunal cancer,Disease
+Disease::DOID:5559,mediastinal cancer,Disease
+Disease::DOID:1595,endogenous depression,Disease
+Disease::DOID:1024,leprosy,Disease
+Disease::DOID:2596,larynx cancer,Disease
+Disease::DOID:10534,stomach cancer,Disease
+Disease::DOID:0060119,pharynx cancer,Disease
+Disease::DOID:784,chronic kidney failure,Disease
+Disease::DOID:8850,salivary gland cancer,Disease
+Disease::DOID:13241,Behcet's disease,Disease
+Disease::DOID:1826,epilepsy syndrome,Disease
+Disease::DOID:1115,sarcoma,Disease
+Disease::DOID:9074,systemic lupus erythematosus,Disease
+Disease::DOID:11119,Gilles de la Tourette syndrome,Disease
+Disease::DOID:4989,pancreatitis,Disease
+Disease::DOID:1993,rectum cancer,Disease
+Disease::DOID:4606,bile duct cancer,Disease
+Disease::DOID:12930,dilated cardiomyopathy,Disease
+Disease::DOID:1725,peritoneum cancer,Disease
+Disease::DOID:594,panic disorder,Disease
+Disease::DOID:10871,age related macular degeneration,Disease
+Disease::DOID:14004,thoracic aortic aneurysm,Disease
+Disease::DOID:2841,asthma,Disease
+Disease::DOID:2998,testicular cancer,Disease
+Disease::DOID:2043,hepatitis B,Disease
+Disease::DOID:6364,migraine,Disease
+Disease::DOID:12995,conduct disorder,Disease
+Disease::DOID:585,nephrolithiasis,Disease
+Disease::DOID:8986,narcolepsy,Disease
+Disease::DOID:10941,intracranial aneurysm,Disease
+Disease::DOID:184,bone cancer,Disease
+Disease::DOID:11934,head and neck cancer,Disease
+Disease::DOID:3565,meningioma,Disease
+Disease::DOID:5041,esophageal cancer,Disease
+Disease::DOID:10608,celiac disease,Disease
+Disease::DOID:5408,Paget's disease of bone,Disease
+Disease::DOID:3070,malignant glioma,Disease
+Disease::DOID:14268,sclerosing cholangitis,Disease
+Disease::DOID:12236,primary biliary cirrhosis,Disease
+Disease::DOID:9296,cleft lip,Disease
+Disease::DOID:11054,urinary bladder cancer,Disease
+Disease::DOID:13189,gout,Disease
+Disease::DOID:1245,vulva cancer,Disease
+Disease::DOID:11949,Creutzfeldt-Jakob disease,Disease
+Disease::DOID:1094,attention deficit hyperactivity disorder,Disease
+Disease::DOID:8398,osteoarthritis,Disease
+Disease::DOID:3121,gallbladder cancer,Disease
+Disease::DOID:3571,liver cancer,Disease
+Disease::DOID:12361,Graves' disease,Disease
+Disease::DOID:1781,thyroid cancer,Disease
+Disease::DOID:12185,otosclerosis,Disease
+Disease::DOID:12306,vitiligo,Disease
+Disease::DOID:90,degenerative disc disease,Disease
+Disease::DOID:9835,refractive error,Disease
+Disease::DOID:1790,malignant mesothelioma,Disease
+Disease::DOID:1459,hypothyroidism,Disease
+Disease::DOID:3953,adrenal gland cancer,Disease
+Disease::DOID:363,uterine cancer,Disease
+Disease::DOID:2174,ocular cancer,Disease
+Disease::DOID:175,vascular cancer,Disease
+Disease::DOID:9352,type 2 diabetes mellitus,Disease
+Disease::DOID:3277,thymus cancer,Disease
+Disease::DOID:13378,Kawasaki disease,Disease
+Disease::DOID:2355,anemia,Disease
+Disease::DOID:0050425,restless legs syndrome,Disease
+Disease::DOID:11555,Fuchs' endothelial dystrophy,Disease
+Disease::DOID:14221,metabolic syndrome X,Disease
+Disease::DOID:10153,ileum cancer,Disease
+Disease::DOID:4045,muscle cancer,Disease
+Disease::DOID:10021,duodenum cancer,Disease
+Disease::DOID:4362,cervical cancer,Disease
+Disease::DOID:4159,skin cancer,Disease
+Disease::DOID:1964,fallopian tube cancer,Disease
+Disease::DOID:11920,tracheal cancer,Disease
+Disease::DOID:5875,retroperitoneal cancer,Disease
+Disease::DOID:11714,gestational diabetes,Disease
+Disease::DOID:11476,osteoporosis,Disease
+Disease::DOID:119,vaginal cancer,Disease
+Disease::DOID:11615,penile cancer,Disease
+Disease::DOID:5612,spinal cancer,Disease
+Disease::DOID:10976,membranous glomerulonephritis,Disease
+Disease::DOID:11239,appendix cancer,Disease
+Disease::DOID:216,dental caries,Disease
+Disease::DOID:11819,ureter cancer,Disease
+Disease::DOID:3310,atopic dermatitis,Disease
+Disease::DOID:1312,focal segmental glomerulosclerosis,Disease
+Disease::DOID:10811,nasal cavity cancer,Disease
+Disease::DOID:0060073,lymphatic system cancer,Disease
+Disease::DOID:5099,middle ear cancer,Disease
