@@ -59,7 +59,12 @@ def create_disease_relationship(disease, target_node, edge_type):
 
 def create_hetionet(node_filepath, edge_filepath, delimiter):
     """
+    Create Neo4j Node and Relationship objects with the appropriate labels, names, and ids
+    from file path to the underlying text files. 
 
+    :param node_filepath: path to the hetionet nodes file
+    :param edge_filepath: path to the hetionet edges file
+    :param delimiter: The separator between fields of the file
     """
     _, nodes_df, edges_df = load_dataframes(node_filepath, edge_filepath)
     nodes_df['node'] = nodes_df.apply(lambda x: Node(x['kind'], name=x['name'], id=x['id']), axis=1)
@@ -85,7 +90,7 @@ def create_hetionet(node_filepath, edge_filepath, delimiter):
 
 def find_all_treatments():
     """
-    
+    Returns compound nodes for all disease where there is no treatment but possible treatments exists.
     """
 
     cypher_query = """ MATCH (:Disease)-[:LOCALIZES]-(:Anatomy)-[:UPREGULATES|DOWNREGULATES]-(g:Gene)
@@ -94,4 +99,18 @@ def find_all_treatments():
                        RETURN distinct c  
                    """
     graph = Graph()
-    graph.run(cypher_query)
+    return graph.run(cypher_query)
+
+def find_all_treatments(disease_name):
+    """
+    Returns compound nodes for :param disease_name where there is no treatments but possible treatments exists. 
+
+    :param disease_name: name of the disease which has possible new treatments.
+    """
+    cypher_query = f""" MATCH (d:Disease'{{name: {disease_name}}}' )-[:LOCALIZES]-(:Anatomy)-[:UPREGULATES|DOWNREGULATES]-(g:Gene)
+                       OPTIONAL MATCH (c)-[:RESEMBLES]-(c2:Compound)
+                       WHERE NOT EXISTS((c)--(d)) AND ((c)--(g) OR (c2)--(g))
+                       RETURN distinct c  
+                   """
+    graph = Graph()
+    return graph.run(cypher_query)
