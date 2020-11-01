@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 def read_files(fileName, type):
-    file = pd.read_csv(fileName, sep = "\t")
+    file = pd.read_csv(fileName, sep = "\t", error_bad_lines=False)
     if type == "nodes":
         file = filter_nodes(file)
     elif type == "edges":
