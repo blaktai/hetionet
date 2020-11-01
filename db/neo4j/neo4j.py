@@ -101,7 +101,7 @@ def find_all_treatments():
     graph = Graph()
     return graph.run(cypher_query)
 
-def find_all_treatments(disease_name):
+def find_disease_treatments(disease_name):
     """
     Returns compound nodes for :param disease_name where there is no treatments but possible treatments exists. 
 
