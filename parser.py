@@ -6,10 +6,10 @@ from data_cleaner import dataCleaner
 from reader import fileReader
 
 def parseTsv(edges, nodes):
-    edges = fileReader(edges)
-    nodes = fileReader(nodes)
+    # edges = fileReader(edges)
+    # nodes = fileReader(nodes)
 
-    base_df = dataCleaner.createBaseDataFrame(edges, nodes)
+    # base_df = dataCleaner.createBaseDataFrame(edges, nodes)
 
     new_edges = dataCleaner.createGuideDataFrame(edges)
     new_edges["disease"] = dataCleaner.replaceColumn(new_edges, "disease", "Disease", "source")
