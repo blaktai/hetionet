@@ -29,5 +29,5 @@ class Treatment(Resource):
 def index():
     node_list = read_text_from_disk(FILENAME, delimiter='\t', skip_header=False)
     diseases = [node.get('id') for node in node_list if node.get('id').startswith('Disease')]
-    return render_template('index.html', diseases=["Disease::DOID:9970"] + diseases)
+    return render_template('index.html', diseases=diseases)
 
