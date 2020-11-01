@@ -1,13 +1,34 @@
 # hetionet
 Hetio Net Project
 
-#### Step 1: Install Redis using run-redis.sh. You can run the .sh file directly or copy and paste its contents in your Terminal.
+## Redis Database
+This branch consists of files to create a Redis database system to model HetioNet. The main purpose of this database is to answer the question: Given a disease id, what is its name, what are the drug names that can treat or paliate this disease, what are gene names that cause this disease, and where this disease occurs. The output of this question can be obtained through a single query (i.e. r.get(disease_id)).
 
-#### Step 2: Once you have installed redis, run "redis-server" in your Terminal. DO NOT CLOSE THIS TAB. It must be running throughout your usage of Redis.
+Redis is a key-value store database system, which outputs the query in constant time O(1).
 
-#### Step 3: Open another tab in your Terminal, run "redis-cli." Again, DO NOT CLOSE THIS TAB. It must be running throughout your usage of Redis.
+### Installation:
 
-#### Step 4: Install redis, pandas, and numpy.
+#### Step 1: Open a tab in the Terminal of your machine. Install Redis by using run-redis.sh or simply running the contents of the file through copying and pasting it on your Terminal tab.
 
-## This step needs to be modified to fit the main cli:
-#### Step 5: Run main.py. It will prompt you to provide the disease id. 
+### Step 2: In the current tab of your Terminal, run:
+```
+redis-server
+```
+### (!) DO NOT CLOSE THIS TAB!
+
+### Step 3: Open a new tab in your Terminal, run:
+```
+redis-cli
+```
+### (!) DO NOT CLOSE THIS TAB!
+
+#### Step 4: Create a virtual environment and install: redis, pandas, and numpy.
+
+#### Step 5: Run: 
+```
+python main.py
+```
+#### Step 6: Type the disease_id you want to identify the disease name, compound name, gene name, and anatomy name of. 
+
+Done.
+
