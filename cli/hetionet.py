@@ -17,7 +17,7 @@ def cli(node_file_path, edge_file_path, delimiter):
         hetionet nodes.tsv edges.tsv
     """
     print(node_file_path, edge_file_path, delimiter)
-    # create_hetionet(node_file_path, edge_file_path, delimiter)
+    create_hetionet(node_file_path, edge_file_path, delimiter)
     create_redis_store(node_file_path, edge_file_path)
     disease_id = input("PLEASE TYPE A DISEASE ID: ") 
     print(find_disease(disease_id))
