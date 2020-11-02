@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile.api
     ports:
      - '8080:8080'
-     depends_on:
-      - neo4j
-      - redis
+    depends_on:
+     - neo4j
+     - redis
   cli:
     build: 
       context: .
