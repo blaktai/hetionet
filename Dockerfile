@@ -12,6 +12,6 @@ WORKDIR /app
 
 # install the python dependencies
 
-RUN conda install --file requirements.txt
+RUN conda install -c click py2neo redis-py pandas
 
 ENTRYPOINT [ "python", "cli.py" ]
