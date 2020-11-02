@@ -16,12 +16,11 @@ def store(node_file_path, edge_file_path, delimiter):
     create_hetionet(node_file_path, edge_file_path, delimiter)    
     
 @cli.command()
-@click.option('-t', "query_type", type=click.Choice(['disease', 'treatment'], case_sensitive=False), )
-def find(query_type):
+@click.option('-t', "query_type", type=click.Choice(['disease', 'treatment'], case_sensitive=False))
+@click.argument("disease_arg", required=True)
+def find(query_type, disease_arg):
     if query_type == 'disease':
-        disease_id = input("PLEASE TYPE A DISEASE ID: ") 
-        print(find_disease(disease_id))
+        print(find_disease(disease_arg))
     else:
-        disease_name = input("PLEASE TYPE A DISEASE NAME: ") 
-        find_disease_treatments(disease_name)
+        print(find_disease_treatments(disease_arg))
         
