@@ -1,34 +1,41 @@
 # hetionet
-Hetio Net Project
+Hetio Net Project by Kyra Alyssa Abbu and Jevon Gordon
 
-## Redis Database
-This branch consists of files to create a Redis database system to model HetioNet. The main purpose of this database is to answer the question: Given a disease id, what is its name, what are the drug names that can treat or paliate this disease, what are gene names that cause this disease, and where this disease occurs. The output of this question can be obtained through a single query (i.e. r.get(disease_id)).
+### This project involves building a database system to model HetioNet using two data sets for nodes and edges. The database should answer the following questions:
 
-Redis is a key-value store database system, which outputs the query in constant time O(1).
+#### Given a disease id, what is its name, what are drug names that can treat or palliate this disease, what are the gene names that cause this disease, and where this disease occurs? 
 
-### Installation:
+#### We assume that a compound can treat a disease if the compound or its resembled compound up-regulates/down- regulates a gene, but the location down-regulates/up-regulates the gene in an opposite direction where the disease occurs. Find all compounds that can treat a new disease name (i.e. the missing edges between compound and disease excluding existing drugs). Obtain and output all drugs in a single query.
 
-#### Step 1: Open a tab in the Terminal of your machine. Install Redis by using run-redis.sh or simply running the contents of the file through copying and pasting it on your Terminal tab.
+## Instructions
 
-### Step 2: In the current tab of your Terminal, run:
+### Step 1. Download and install Redis and Neo4j. 
+
+### Step 2. Run the Neo4j server. Run the Redis server in two tabs of your Terminal by typing ```redis-cli``` on one and  ```redis-server``` on another. Keep these tabs open. 
+
+### Step 3. Install the requirements.
+
 ```
-redis-server
+pip install -r requirements.txt
 ```
-### (!) DO NOT CLOSE THIS TAB!
+### Step 4. Put the data into the database system.
 
-### Step 3: Open a new tab in your Terminal, run:
 ```
-redis-cli
+python cli.py store ./path_for_nodes ./path_for_edges
 ```
-### (!) DO NOT CLOSE THIS TAB!
 
-#### Step 4: Create a virtual environment and install: redis, pandas, and numpy.
+## Redis Option
 
-#### Step 5: Run: 
 ```
-python main.py
+python cli.py find -t disease
 ```
-#### Step 6: Type the disease_id you want to identify the disease name, compound name, gene name, and anatomy name of. 
 
-Done.
 
+## Neo4j Options
+
+```
+python cli.py find -t disease
+```
+```
+python cli.py find -t treatment
+```
