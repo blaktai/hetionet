@@ -1,4 +1,4 @@
-FROM python:3-alpine3.8
+FROM amancevice/pandas:1.1.2-alpine
 
 RUN mkdir /app 
 
@@ -9,6 +9,9 @@ ADD . /app
 # subsequent commands will be execute here
 
 WORKDIR /app
+
+# pip upgrade required
+RUN pip install --upgrade pip
 
 # install the python dependencies
 
