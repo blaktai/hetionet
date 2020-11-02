@@ -1,0 +1,22 @@
+FROM continuumio/miniconda3
+
+RUN mkdir /app 
+
+# copy all source files to app folder
+ADD . /app
+
+# make app the current directory all 
+# subsequent commands will be execute here
+
+WORKDIR /app
+
+# install the python dependencies
+
+RUN conda install -c conda-forge click py2neo redis-py pandas
+RUN pip install flask_restx
+
+# environment variable for server port
+ENV API_PORT 8080
+EXPOSE ${API_PORT}
+
+ENTRYPOINT [ "python", "api.py" ]
