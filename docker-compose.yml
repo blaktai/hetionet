@@ -8,15 +8,15 @@ services:
     ports:
      - '8080:8080'
      depends_on:
-        - neo4j
-        - redis
+      - neo4j
+      - redis
   cli:
     build: 
       context: .
       dockerfile: Dockerfile
     depends_on:
-        - neo4j
-        - redis
+      - neo4j
+      - redis
   neo4j:
     image: 'neo4j:latest'
     ports:
