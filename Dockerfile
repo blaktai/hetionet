@@ -1,4 +1,4 @@
-FROM amancevice/pandas:1.1.2-alpine
+FROM continuumio/miniconda3
 
 RUN mkdir /app 
 
@@ -10,11 +10,8 @@ ADD . /app
 
 WORKDIR /app
 
-# pip upgrade required
-RUN pip install --upgrade pip
-
 # install the python dependencies
 
-RUN pip install -r requirements.txt
+RUN conda install --file requirements.txt
 
 ENTRYPOINT [ "python", "cli.py" ]
