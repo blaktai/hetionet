@@ -13,5 +13,10 @@ WORKDIR /app
 # install the python dependencies
 
 RUN conda install -c conda-forge click py2neo redis-py pandas
+RUN pip install flask_restx
 
-ENTRYPOINT [ "python", "cli.py" ]
+# environment variable for server port
+ENV API_PORT 8080
+EXPOSE ${API_PORT}
+
+ENTRYPOINT [ "python", "api.py" ]
