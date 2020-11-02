@@ -12,7 +12,8 @@ def cli():
 @click.argument('edge_file_path', type=click.Path(exists=True), required=True)
 @click.option("--delimiter", default="\t", help="Delimiter of file format")
 def store(node_file_path, edge_file_path, delimiter):
-    create_redis_store(node_file_path, edge_file_path)    
+    create_redis_store(node_file_path, edge_file_path)
+    create_hetionet(node_file_path, edge_file_path, delimiter)    
     
 @cli.command()
 @click.option('-t', "query_type", type=click.Choice(['disease', 'treatment'], case_sensitive=False), )
