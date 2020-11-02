@@ -12,6 +12,6 @@ WORKDIR /app
 
 # install the python dependencies
 
-RUN pip -r requirements.txt
+RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python", "cli.py" ]
