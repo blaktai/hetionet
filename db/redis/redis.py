@@ -54,7 +54,7 @@ def create_redis_store(node_file_path, edge_file_path):
 
     # Start Redis
     r = redis.Redis()
-
+    r.sadd('diseases', list(dgca.values()))
     # Parse dictionary keys and values and add to Redis database
     for key in dgca.keys():
         r.mset({str(key): str(dgca[key])})
