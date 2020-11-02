@@ -107,10 +107,12 @@ def find_disease_treatments(disease_name):
 
     :param disease_name: name of the disease which has possible new treatments.
     """
-    cypher_query = f""" MATCH (d:Disease'{{name: {disease_name}}}' )-[:LOCALIZES]-(:Anatomy)-[:UPREGULATES|DOWNREGULATES]-(g:Gene)
-                       OPTIONAL MATCH (c)-[:RESEMBLES]-(c2:Compound)
-                       WHERE NOT EXISTS((c)--(d)) AND ((c)--(g) OR (c2)--(g))
+    cypher_query = f"""MATCH (d:Disease{{name: '{disease_name}'}})-[:LOCALIZES]->(:Anatomy)-[:UPREGULATES|DOWNREGULATES]->(g:Gene)<-[:UPREGULATES|DOWNREGULATES]-(c:Compound)
+                       MATCH (c2:Compound)-[:RESEMBLES]->(c3:Compound)
+                       WHERE NOT EXISTS((c2)--(d)) AND (c = c2 OR c = c3)
                        RETURN distinct c  
-                   """
+                    """
     graph = Graph()
-    return graph.run(cypher_query)
+    return graph.run(cypher_query).data()
+
+    
